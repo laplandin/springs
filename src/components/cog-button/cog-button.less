@@ -1,0 +1,31 @@
+.cog-button {
+  display: block;
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 20px;
+
+  width: 310px;
+  height: 70px;
+
+  background-color: @grey;
+
+  &:hover .cog {
+    transition: transform 0.7s ease;
+    transform: rotate(360deg);
+    transform-origin: center center;
+  }
+}
+
+.cog {
+  position: absolute;
+
+  top: -13px;
+  left: -48px;
+  display: block;
+  width: 96px;
+  height: 96px;
+
+  background: url("../img/cog.png") no-repeat top center;
+  background-size: contain;
+
+}

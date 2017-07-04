@@ -1,0 +1,95 @@
+#gears {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  input {
+    display: none;
+  }
+
+  form {
+    height: 0;
+  }
+
+}
+
+.gear-toggle {
+  position: absolute;
+
+  height:100px;
+  width: 100px;
+
+  border-radius: 50%;
+  background-color: cadetblue;
+
+  display: none;
+  cursor: pointer;
+
+  font-size: 18px;
+
+  &[for=ref-annulus] {
+    top: -55px;
+    right: 275px;
+
+    span {
+      position: absolute;
+      left: -20px;
+    }
+  }
+
+  &[for=ref-planet] {
+    top: 270px;
+    left: 140px;
+
+    span {
+      position: absolute;
+      left: -40px;
+      top: -20;
+    }
+  }
+
+  &[for=ref-sun] {
+    right: 270px;
+    bottom: -50px;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px #193047;
+  }
+
+  &:active {
+    box-shadow: inset 0 5px 30px #193047;
+  }
+
+}
+
+.gear-toggle--visible {
+  display: block;
+}
+
+path {
+  fill-rule: evenodd;
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+.sun path {
+  fill: #6baed6;
+}
+
+.planet path {
+  fill: #9ecae1;
+}
+
+.annulus path {
+  fill: #c6dbef;
+}
+

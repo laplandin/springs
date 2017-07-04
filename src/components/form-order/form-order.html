@@ -1,0 +1,32 @@
+<div class="container order-page">
+    <h2 class="text-uppercase section-title">Оформление заказа</h2>
+    <div class="row ">
+        <div class="col-md-12"> <!-- Блок формы оформления заказа  -->
+            <!--  -->
+            <div class="col-sm-12 form-order"> <!-- Начало карточки в корзине -->
+                <form class="form-order" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <h3 class="text-uppercase">Контактные данные</h3>
+                        <div class="form-order__input-wrapper">
+                            <label for="form-order__name" class="form-order__label">Ваше имя</label>
+                            <input type="text" class="form-order__input" id="form-order__name" name="username" required>
+                        </div>
+                        <div class="form-order__input-wrapper">
+                            <label for="form-order__phone" class="form-order__label">Ваш телефон</label>
+                            <input type="text" class="form-order__input" id="form-order__phone" name="userphone" required>
+                        </div>
+                        <label class="form-order__label-file">
+                            <input type="file" class="form-order__file" name="file">
+                            <span class="text-uppercase">
+                                <i class="fa fa-paperclip fa-2x" aria-hidden="true"></i>
+                                Прикрепить проект
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn form-order__submit">Отправить</button>
+                </form>
+            </div> <!-- Конец формы оформления заказа -->
+        </div>
+    </div>
+</div> <!-- Конец Окна итого и перехода к оплате -->
+

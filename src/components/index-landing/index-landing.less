@@ -1,0 +1,200 @@
+.section {
+  margin-top: 94px;
+  font-size: 10px;
+}
+
+.section-title {
+  margin-bottom: 76px;
+
+  .font(@russo, 3em, 1em);
+  color: @orange;
+  text-transform: uppercase;
+}
+
+.section-text {
+  margin-bottom: 30px;
+
+  .font(@akrobat, 2.4em, 1.4em);
+  color: @dark;
+
+  &--spring::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 142px;
+    margin: 30px auto 0;
+
+    background: url("../img/spring-icon.png") no-repeat center center;
+  }
+}
+
+.spring {
+  display: block;
+  width: 35px;
+  height: 142px;
+  margin: 30px auto 50px;
+
+  cursor: pointer;
+
+  background: url("../img/spring-icon.png") no-repeat center center;
+}
+
+
+.flexslider {
+  overflow: hidden;
+  font-size: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev,
+.flexslider:hover .flex-direction-nav .flex-next {
+  width: 41px;
+  height: 79px;
+}
+.flex-direction-nav a.flex-next:before {
+  content: '';
+  background: url("../img/control-right.png") center top no-repeat;
+}
+
+.flex-direction-nav a:before {
+  content: '';
+  display: block;
+  width: 41px;
+  height: 79px;
+  background: url("../img/control-left.png") center top no-repeat;
+}
+
+.slide-slogan {
+  position: absolute;
+
+  color: @white;
+  .font(@russo, 7em, 1.2em);
+  text-transform: uppercase;
+
+  &--1 {
+    top: 40%;
+    right: 20%;
+    text-align: right;
+  }
+
+  &--2 {
+    top: 58px;
+    left: 10%;
+    text-align: left;
+  }
+
+  &--3 {
+    top: 58px;
+    left: 10%;
+    color: black;
+  }
+}
+
+.production {
+  .img-wrapper {
+    margin-top: 60px;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .card-block {
+    margin-top: 26px;
+  }
+
+  .card-text {
+    text-align: center;
+    .font(@russo, 3em, 1.2em);
+    text-transform: uppercase;
+    color: @orange;
+  }
+}
+
+.designation-row:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.designation {
+  overflow: visible;
+
+  .card {
+    position: relative;
+
+    min-height: 60px;
+    padding-top: 100px;
+    background: linear-gradient(to top, @orange 0%, @orange 17%, @white 50%, @white 100%);
+    transition: background .3s ease;
+
+    overflow: visible;
+
+    &:hover .gradient-assistant {
+      opacity: 1;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+  }
+
+  .gradient-assistant {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: @orange;
+    transition: opacity .4s linear;
+    z-index: 10;
+  }
+
+  img {
+    position: relative;
+    left: -13px;
+    z-index: 100;
+
+    transition: all .2s ease-in;
+  }
+
+  .card-text {
+    position: relative;
+    padding: 0 35px;
+
+    //text-align: center;
+    .font(@russo, 2em, 0.95em);
+    color: @white;
+
+    z-index: 101;
+  }
+}
+
+.clients {
+  .row {
+    margin-bottom: 50px;
+  }
+
+  .img--lukoil,
+  .img--rzhd {
+    margin-top: 40px;
+  }
+
+  .img--autovaz {
+    margin-top: 20px;
+  }
+
+  .img--rostselmash {
+    margin-top: 52px;
+  }
+
+  .img--rostvertol,
+  .img--tagmet,
+  .img--agrocom {
+    height: 150px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+

@@ -1,0 +1,36 @@
+{
+  "name": "proto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laplandin/proto.git"
+  },
+  "author": "Laplandin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laplandin/proto/issues"
+  },
+  "homepage": "https://github.com/laplandin/proto#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.4.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-ignore": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "3.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-watch": "^4.3.11",
+    "imagemin-pngquant": "^5.0.0",
+    "rimraf": "^2.5.4"
+  }
+}
