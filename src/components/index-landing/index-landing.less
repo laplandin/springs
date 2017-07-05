@@ -121,8 +121,7 @@
   .card {
     position: relative;
 
-    min-height: 60px;
-    padding-top: 100px;
+    min-height: 350px;
     background: linear-gradient(to top, @orange 0%, @orange 17%, @white 50%, @white 100%);
     transition: background .3s ease;
 
@@ -133,7 +132,7 @@
     }
 
     &:hover img {
-      transform: scale(1.1);
+      transform: scale(1.1) translateX(-45%);
     }
 
   }
@@ -151,18 +150,26 @@
   }
 
   img {
-    position: relative;
-    left: -13px;
+    position: absolute;
+
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    //left: -13px;
     z-index: 100;
 
     transition: all .2s ease-in;
   }
 
   .card-text {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 0 35px;
 
     //text-align: center;
+    text-transform: uppercase;
     .font(@russo, 2em, 0.95em);
     color: @white;
 
