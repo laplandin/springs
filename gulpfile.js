@@ -101,12 +101,12 @@ gulp.task('cssVendor', function() {
 
 gulp.task('image:build', function () {
   gulp.src(path.src.img) //Выберем наши картинки
-    .pipe(imagemin({ //Сожмем их
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()],
-      interlaced: true
-    }))
+    // .pipe(imagemin({ //Сожмем их
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}],
+    //   use: [pngquant()],
+    //   interlaced: true
+    // }))
     .pipe(gulp.dest(path.build.img)) //И бросим в build
    .pipe(reload({stream: true}));
 });

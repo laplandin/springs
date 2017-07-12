@@ -1,31 +1,5 @@
 .section {
   margin-top: 94px;
-  //font-size: 10px;
-}
-
-.section-title {
-  margin-bottom: 76px;
-
-  .font(@russo, 3em, 1em);
-  color: @orange;
-  text-transform: uppercase;
-}
-
-.section-text {
-  margin-bottom: 30px;
-
-  .font(@akrobat, 2.4em, 1.4em);
-  color: @dark;
-
-  &--spring::after {
-    content: '';
-    display: block;
-    width: 35px;
-    height: 142px;
-    margin: 30px auto 0;
-
-    background: url("../img/spring-icon.png") no-repeat center center;
-  }
 }
 
 .spring {
@@ -40,56 +14,72 @@
 }
 
 
-.flexslider {
+.flexslider-index {
   overflow: hidden;
-  //font-size: 10px;
-}
 
-.flexslider:hover .flex-direction-nav .flex-prev,
-.flexslider:hover .flex-direction-nav .flex-next {
-  width: 41px;
-  height: 79px;
-}
-.flex-direction-nav a.flex-next:before {
-  content: '';
-  background: url("../img/control-right.png") center top no-repeat;
-}
+  .flexslider:hover .flex-direction-nav .flex-prev,
+  .flexslider:hover .flex-direction-nav .flex-next {
+    width: 41px;
+    height: 79px;
+  }
 
-.flex-direction-nav a:before {
-  content: '';
-  display: block;
-  width: 41px;
-  height: 79px;
-  background: url("../img/control-left.png") center top no-repeat;
-}
+  .flex-direction-nav a.flex-next:before {
+    content: '';
+    background: url("../img/arrow-left.png") center top no-repeat;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
 
-.slide-slogan {
-  position: absolute;
+  .flex-direction-nav a {
+    width: 41px;
+    height: 79px;
+  }
 
-  color: @white;
-  .font(@russo, 7em, 1.2em);
-  text-transform: uppercase;
+  .flex-direction-nav a:before {
+    content: '';
+    display: block;
+    width: 41px;
+    height: 79px;
+    background: url("../img/arrow-left.png") center top no-repeat;
+  }
 
-  @media only screen and (min-width : 992px) {
+  .slide-slogan {
+    position: absolute;
+
+    color: @white;
     .font(@russo, 5em, 1.2em);
-  }
 
-  &--1 {
-    top: 40%;
-    right: 20%;
-    text-align: right;
-  }
+    text-transform: uppercase;
 
-  &--2 {
-    top: 10%;
-    left: 10%;
-    text-align: left;
-  }
+    @media only screen and (min-width : 992px) {
+      .font(@russo, 5em, 1.2em);
+    }
 
-  &--3 {
-    top: 10%;
-    left: 10%;
-    color: black;
+    @media only screen and (min-width : 992px) {
+      .font(@russo, 7em, 1.2em);
+    }
+
+    &--1 {
+      top: 40%;
+      right: 20%;
+      text-align: right;
+    }
+
+    &--2 {
+      top: 10%;
+      left: 10%;
+      text-align: left;
+    }
+
+    &--3 {
+      top: 10%;
+      left: 10%;
+      color: black;
+    }
   }
 }
 
@@ -159,7 +149,7 @@
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-    //left: -13px;
+
     z-index: 100;
 
     transition: all .2s ease-in;

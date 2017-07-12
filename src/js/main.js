@@ -1,9 +1,4 @@
 $(document).ready(function() {
-// slider initialization
-    $('.flexslider').flexslider({
-        animation: "slide"
-    });
-// slider end
 
 //     var myHeader = document.querySelector("#header");
 // // construct an instance of Headroom, passing the element

@@ -1,10 +1,9 @@
-<div class="container order-page">
+<div class="container order-section">
     <h2 class="text-uppercase section-title">Оформление заказа</h2>
-    <div class="row ">
-        <div class="col-md-12"> <!-- Блок формы оформления заказа  -->
-            <!--  -->
-            <div class="col-sm-12 form-order"> <!-- Начало карточки в корзине -->
-                <form class="form-order" enctype="multipart/form-data">
+    <form class="form-order" enctype="multipart/form-data">
+        <div class="row ">
+            <div class="col-md-12"> <!-- Блок формы оформления заказа  -->
+                <div class="col-sm-12 form-order"> <!-- Начало карточки в корзине -->
                     <div class="form-group">
                         <h3 class="text-uppercase">Контактные данные</h3>
                         <div class="form-order__input-wrapper">
@@ -23,10 +22,14 @@
                             </span>
                         </label>
                     </div>
-                    <button type="submit" class="btn form-order__submit">Отправить</button>
-                </form>
-            </div> <!-- Конец формы оформления заказа -->
+                </div> <!-- Конец формы оформления заказа -->
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button type="submit" class="primary-btn">Отправить</button>
+            </div>
+        </div>
+    </form>
 </div> <!-- Конец Окна итого и перехода к оплате -->
 
