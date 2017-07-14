@@ -1,0 +1,65 @@
+.delivery-section {
+  height: calc(~'100vh - 168px');
+  //display: flex;
+  position: relative;
+
+  .container {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.delivery-column {
+
+  &--lightblue {
+    width: calc(~'50% - 288px');
+    height: inherit;
+    float: left;
+    //flex-grow: 1;
+    background-color: lightblue;
+    -webkit-clip-path: polygon(100% 0, 100% 70%, 92% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 70%, 92% 100%, 0 100%, 0 0);
+  }
+
+  &--stub {
+    flex-basis: 390px;
+  }
+
+  &--yellow {
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //left: 50%;
+    //transform: translateX(-50%);
+    float: left;
+    height: inherit;
+    width: 576px;
+    background: yellow;
+
+    -webkit-clip-path: polygon(84% 0, 84% 70%, 100% 100%, 0 100%, 16% 70%, 16% 0);
+    clip-path: polygon(84% 0, 84% 70%, 100% 100%, 0 100%, 16% 70%, 16% 0);
+
+    z-index: 999;
+  }
+
+  &--blue {
+    width: calc(~'50% - 288px');
+    height: inherit;
+    float: left;
+    background-color: blue;
+
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 70%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 70%, 0 0);
+  }
+
+}
+
+.delivery-tracks {
+  position: absolute;
+  align-self: center;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1000;
+}
+
