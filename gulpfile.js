@@ -1,7 +1,7 @@
 var  gulp = require('gulp');
 var  watch = require('gulp-watch');
 var  prefixer = require('gulp-autoprefixer');
-//var  uglify = require('gulp-uglify');
+var  uglify = require('gulp-uglify');
 var  sourcemaps = require('gulp-sourcemaps');
 var  cssmin = require('gulp-clean-css');
 var  imagemin = require('gulp-imagemin');
@@ -72,11 +72,7 @@ gulp.task('html:build', function() {
 var condition = '.src/plugins/**/*.js';
 gulp.task('js:build', function() {
   gulp.src(path.src.js)
-    //.pipe(rigger())
-    //.pipe(sourcemaps.init()) //Инициируем sourcemap
-    //.pipe(uglify()) //Сжимаем js
-    //.pipe(sourcemaps.write()) //Прописываем карты
-    //   .pipe(ignore.exclude(condition))
+    .pipe(uglify()) //Сжимаем js
     .pipe(concat('main.js'))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream:true}));
@@ -88,7 +84,7 @@ gulp.task('css:build', function() {
     //.pipe(sourcemaps.init())
     .pipe(less())
     .pipe(prefixer())
-    // .pipe(cssmin({compatibility: 'ie10'}))
+    .pipe(cssmin({compatibility: 'ie10'}))
     //.pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream:true}));
@@ -100,13 +96,13 @@ gulp.task('cssVendor', function() {
 });
 
 gulp.task('image:build', function () {
-  gulp.src(path.src.img) //Выберем наши картинки
-    // .pipe(imagemin({ //Сожмем их
-    //   progressive: true,
-    //   svgoPlugins: [{removeViewBox: false}],
-    //   use: [pngquant()],
-    //   interlaced: true
-    // }))
+  return gulp.src(path.src.img) //Выберем наши картинки
+    .pipe(imagemin({ //Сожмем их
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()],
+      interlaced: true
+    }))
     .pipe(gulp.dest(path.build.img)) //И бросим в build
    .pipe(reload({stream: true}));
 });

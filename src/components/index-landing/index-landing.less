@@ -1,3 +1,21 @@
+.index-banner {
+  position: relative;
+  height: 100vh;
+
+  background: url("../img/banner.jpg") no-repeat top center;
+  background-size: cover;
+  margin-bottom: 46px;
+
+  z-index: 1000;
+}
+
+.page-header__banner {
+  margin-top: 30vh;
+  .font(@russo, 8.5em, 1em);
+  text-transform: uppercase;
+  color: @orange;
+}
+
 .section {
   margin-top: 94px;
 }
@@ -84,6 +102,19 @@
 }
 
 .production {
+  a {
+    text-decoration: none;
+  }
+
+  .card {
+    padding-bottom: 20px;
+
+    &:hover {
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+  }
+
   .img-wrapper {
     margin-top: 60px;
   }
@@ -99,7 +130,7 @@
 
   .card-text {
     text-align: center;
-    .font(@russo, 3em, 1.2em);
+    .font(@russo, 2.8em, 1.2em);
     text-transform: uppercase;
     color: @orange;
   }

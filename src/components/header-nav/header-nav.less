@@ -1,47 +1,29 @@
-//.headroom {
-//  will-change: transform;
-//  transition: transform 200ms linear;
-//}
-//.headroom--pinned {
-//  transform: translateY(0%);
-//}
-//.headroom--unpinned {
-//  transform: translateY(-100%);
-//}
-
-.page-header__wrapper {
-  height: 100vh;
-  position: relative;
-  z-index: 1000;
-
-  background: url("../img/banner.jpg") no-repeat top center;
-  background-size: cover;
-
-}
-
-.index-banner {
-  position: relative;
-
-  //height: calc(~'100vh - 163px');
-}
-
 .headroom {
+  background-color: rgba(255, 255, 255, .8);
+
+  will-change: transform;
   position: fixed;
   right: 0;
   top: 0;
   left: 0;
-  transition: all .2s ease-in-out;
-}
-.headroom--unpinned {
-  top: -100px;
+  transition: all .4s ease-in-out;
+
+  z-index: 1100;
 }
 .headroom--pinned {
-  top: 0;
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
 }
 
 .page-header {
   margin: 42px 0 0 0;
   padding: 0;
+
+  @media @wide-desktop {
+    margin: 0;
+  }
 }
 
 .page-nav {
@@ -51,6 +33,16 @@
 
 .nav-logo {
   margin-top: 15px;
+
+  @media screen and (max-height: 768px) {
+    margin-top: 5px;
+    width: 100px;
+    height: auto;
+  }
+
+  @media @wide-desktop {
+    float: right;
+  }
 }
 
 .logo-text {
@@ -58,6 +50,10 @@
   text-transform: uppercase;
   color: @dark;
   margin: 0;
+
+  @media @wide-desktop {
+    margin-top: 15px;
+  }
 }
 
 .header-hr {
@@ -77,9 +73,9 @@
 }
 
 .nav-btn.btn {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 10px;
   padding: 0;
-  .font(@russo, 2.5em, 1em);
+  .font(@russo, 2em, 1em);
   text-transform: uppercase;
   color: @dark;
   text-align: right;
@@ -87,11 +83,8 @@
   &:hover {
     color: @orange;
   }
-}
 
-.page-header__banner {
-  margin-top: 25vh;
-  .font(@russo, 8.5em, 1em);
-  text-transform: uppercase;
-  color: @orange;
+  @media @wide-desktop {
+    margin: 10px 0 0 0;
+  }
 }

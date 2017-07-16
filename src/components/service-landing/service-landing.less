@@ -1,6 +1,6 @@
 .service-banner {
   position: relative;
-  height: calc(~'100vh - 209px');
+  height: 100vh;
 
   background: url("../img/service-banner.jpg") no-repeat top center;
   background-size: cover;
@@ -13,20 +13,9 @@
   }
 
   .substrate {
-    margin-top: 10vh;
+    margin-top: 30vh;
     position: relative;
     background-color: @lightgrey;
-
-    //&::before {
-    //  .pseudo();
-    //  width: 361px;
-    //  height: 508px;
-    //  background: url('../img/banner-springs.png') no-repeat center center;
-    //  background-size: contain;
-    //  z-index: 10;
-    //  left: -100px;
-    //  bottom: -50%;
-    //}
 
     &::after {
       .shadow-after();
@@ -194,18 +183,6 @@
     background-color: @orange;
     opacity: 0;
     z-index: -1;
-
-    @media only screen and (min-width : 900px) {
-      visibility: visible;
-    }
-
-    @media only screen and (min-width : 320px) {
-      visibility: hidden;
-    }
-    //
-    //@media only screen and (min-width : 480px) {
-    //  visibility: hidden;
-    //}
   }
 
   .outer-anim {

@@ -1,3 +1,8 @@
+.gear-block {
+  position: relative;
+  min-height: 630px;
+}
+
 #gears {
   position: absolute;
   left: 50%;
@@ -22,12 +27,14 @@
   width: 100px;
 
   border-radius: 50%;
-  background-color: cadetblue;
+  background-color: @orange;
 
   display: none;
   cursor: pointer;
 
-  font-size: 18px;
+  .font(@russo, 1.6em, 1em);
+  text-transform: uppercase;
+  color: @dark;
 
   &[for=ref-annulus] {
     top: -55px;
@@ -77,19 +84,19 @@
 
 path {
   fill-rule: evenodd;
-  stroke: #333;
-  stroke-width: 2px;
+  stroke: @dark;
+  stroke-width: 4px;
 }
 
 .sun path {
-  fill: #6baed6;
+  fill: @orange;
 }
 
 .planet path {
-  fill: #9ecae1;
+  fill: #F59441;
 }
 
 .annulus path {
-  fill: #c6dbef;
+  fill: #F5AE71;
 }
 
