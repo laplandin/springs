@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  padding: 30px 15px 60px;
+  padding: 10px 15px 0;
 
   @media only screen and (min-width : 320px) {
     overflow: hidden;
@@ -10,6 +10,12 @@
 
   &::before {
     .shadow-top();
+  }
+
+  .logo {
+    @media @wide-desktop {
+      width: 100px;
+    }
   }
 }
 
@@ -23,6 +29,10 @@
   margin-top: 60px;
   .font(@russo, 2em, 1em);
   color: @white;
+
+  @media @wide-desktop {
+    margin-top: 30px;
+  }
 }
 
 .footer__phone {

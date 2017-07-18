@@ -56,7 +56,7 @@ var config = {
   server: {
     baseDir: "./build"
   },
-  tunnel: true,
+  // tunnel: true,
   host: 'localhost',
   port: 9000,
   logPrefix: "Laplandin"
@@ -72,7 +72,7 @@ gulp.task('html:build', function() {
 var condition = '.src/plugins/**/*.js';
 gulp.task('js:build', function() {
   gulp.src(path.src.js)
-    .pipe(uglify()) //Сжимаем js
+    // .pipe(uglify()) //Сжимаем js
     .pipe(concat('main.js'))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream:true}));
@@ -83,8 +83,8 @@ gulp.task('css:build', function() {
     .pipe(plumber())
     //.pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(prefixer())
-    .pipe(cssmin({compatibility: 'ie10'}))
+    // .pipe(prefixer())
+    // .pipe(cssmin({compatibility: 'ie10'}))
     //.pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream:true}));

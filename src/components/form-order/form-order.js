@@ -3,6 +3,7 @@ var form = $('.form-order');
 var submitBtn = $('.form-order__submit');
 var fileInput = $('.form-order__file');
 var fileLabel = $('.form-order__label-file span');
+var textarea = $('.form-order__textarea');
 
 submitBtn.on('click', function(e) {
     e.preventDefault();
@@ -36,3 +37,19 @@ fileInputs.on('blur', function (e) {
         $(this).siblings('label').removeClass('form-order__label--focused');
     }
 });
+
+if (textarea.val()) {
+    fileInputs.siblings('label').addClass('form-order__label--focused');
+}
+
+textarea.on('focus', function (e) {
+    $(this).siblings('label').addClass('form-order__label--focused');
+});
+
+textarea.on('blur', function (e) {
+    if (!$(this).val()) {
+        $(this).siblings('label').removeClass('form-order__label--focused');
+    }
+});
+
+

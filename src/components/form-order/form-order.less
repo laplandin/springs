@@ -79,6 +79,24 @@
   }
 }
 
+.form-order__textarea {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 80px;
+  border: none;
+  border-bottom: 2px solid @dark;
+  .font(@akrobat, 2.5em, 1.2em);
+  padding-top: 22px;
+  transition: height .2s linear, margin .2s linear;
+
+  &:focus {
+    border-bottom: 2px solid @orange;
+    outline: none;
+    margin-bottom: 20px;
+    height: 120px;
+  }
+}
+
 .form-order__file {
   width: 0.1px;
   height: 0.1px;

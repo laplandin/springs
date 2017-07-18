@@ -18,17 +18,12 @@
 }
 
 .page-header {
-  margin: 42px 0 0 0;
+  margin: 40px 0 40px 0;
   padding: 0;
 
   @media @wide-desktop {
     margin: 0;
   }
-}
-
-.page-nav {
-  margin-bottom: 30px;
-
 }
 
 .nav-logo {
@@ -42,6 +37,7 @@
 
   @media @wide-desktop {
     float: right;
+    margin-bottom: 5px;
   }
 }
 
@@ -65,15 +61,19 @@
 }
 
 .btn.btn-phone {
-  margin: 20px 0;
+  margin: 10px 0 0 0;
   padding: 0;
 
   .font(@russo, 3em, 1em);
   color: @orange;
+
+  @media @wide-desktop {
+    margin-top: 15px;
+  }
 }
 
 .nav-btn.btn {
-  margin: 10px 0 0 10px;
+  margin: 10px 0;
   padding: 0;
   .font(@russo, 2em, 1em);
   text-transform: uppercase;
@@ -84,7 +84,4 @@
     color: @orange;
   }
 
-  @media @wide-desktop {
-    margin: 10px 0 0 0;
-  }
 }

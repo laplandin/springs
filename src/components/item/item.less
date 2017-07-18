@@ -1,6 +1,13 @@
 .item-section {
-  margin-bottom: 150px;
-  min-height: calc(~'100vh - 568px');
+  margin-top: 200px;
+  margin-bottom: 100px;
+  min-height: calc(~'100vh - 200px - 303px');
+
+  @media @wide-desktop {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    min-height: calc(~'100vh - 150px - 253px');
+  };
 
   .item-title {
     .font(@russo, 4.5em, 1em);
