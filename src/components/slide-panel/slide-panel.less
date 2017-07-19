@@ -12,6 +12,14 @@
     position: relative;
     height: 100vh;
     width: 70px;
+    cursor: pointer;
+
+    z-index: 999;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      z-index: 1000;
+    }
 
     &--baikal {
       background-color: #0794d5;
@@ -53,25 +61,36 @@
 }
 
 .slide-panel__amply {
+  position: absolute;
+  width: 100%;
+  top: 0;
   height: 100vh;
   padding-top: 10vh;
 
-  &--baikal {
+  &.baikal {
     background-color: #0794d5;
+    z-index: 99;
   }
 
-  &--dl {
+  &.dl {
     background-color: #f5ad02;
+    z-index: 99;
   }
 
-  &--pek {
+  &.pek {
     background-color: #3d52a3;
+    z-index: 99;
   }
 
   .logo-wrapper {
     padding: 15px 0;
     background-color: white;
     max-height: 170px;
+    min-height: 150px;
+
+    & .logo--bottom {
+      transform: translateY(-75px);
+    }
   }
 
   .text-about {
