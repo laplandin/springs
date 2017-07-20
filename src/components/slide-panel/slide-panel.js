@@ -1,6 +1,7 @@
 var sidePanel = {
     init: function(current) {
-        this.current = current;
+        var viewName = this.current = current;
+        $('*[data-toggle="' + viewName + '"]').hide();
         $('.slide-panel__amply.' + this.current).show();
     },
 
@@ -9,8 +10,10 @@ var sidePanel = {
     next: '',
     z: 100,
 
-    changeMenu: function(nextView) {
-
+    changeMenu: function(viewName) {
+        console.log(viewName);
+        $('.side-item').fadeIn();
+        $('*[data-toggle="' + viewName + '"]').fadeOut();
     },
 
     renderNext: function (nextView) {
@@ -35,11 +38,11 @@ var sidePanel = {
     },
 
     handle: function(element) {
-        this.next = this.getNextName(element);
+        var name = this.next = this.getNextName(element);
         console.log('handled');
         // this.hidePrevious();
         this.renderNext($('.slide-panel__amply.' + this.next));
-
+        this.changeMenu(name);
     }
 
 };
