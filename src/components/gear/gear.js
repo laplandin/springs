@@ -1,5 +1,5 @@
 if (/contacts/.test(window.location.href)) {
-    var width = 960,
+    var width = 600,
         height = 500,
         radius = 80,
         x = Math.sin(2 * Math.PI / 3),

@@ -3,3 +3,4 @@ node_modules/
 .git/
 src/font-awesome-4.7.0
 *.log
+.idea/

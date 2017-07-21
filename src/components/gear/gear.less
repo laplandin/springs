@@ -1,14 +1,14 @@
 .gear-block {
   position: relative;
-  min-height: 630px;
+  min-height: 500px;
 }
 
 #gears {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
+  //position: absolute;
+  //left: 50%;
+  //top: 50%;
+  //
+  //transform: translate(-50%, -50%);
 
   input {
     display: none;
@@ -37,8 +37,8 @@
   color: @dark;
 
   &[for=ref-annulus] {
-    top: -55px;
-    right: 275px;
+    //top: -55px;
+    right: 115px;
 
     span {
       position: absolute;
@@ -47,19 +47,19 @@
   }
 
   &[for=ref-planet] {
-    top: 270px;
-    left: 140px;
+    top: 200px;
+    left: -20px;
 
     span {
       position: absolute;
       left: -40px;
-      top: -20;
+      top: -20px;
     }
   }
 
   &[for=ref-sun] {
-    right: 270px;
-    bottom: -50px;
+    right: 115px;
+    bottom: 0;
 
     span {
       position: absolute;
