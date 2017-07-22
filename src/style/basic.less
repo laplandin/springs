@@ -103,17 +103,19 @@ body {
   color: @white;
 
   .font(@russo, 2.4em, 1em);
-  line-height: 75px;
+  line-height: 70px;
   vertical-align: middle;
   text-align: center;
   background-color: transparent;
   text-transform: uppercase;
   border-radius: 0;
   border: 2px solid white;
+  transition: background-color .3s ease;
 
   &:hover {
     text-decoration: none;
-    color: white;
+    color: @dark;
+    background-color: white;
   }
 }
 

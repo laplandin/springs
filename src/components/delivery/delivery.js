@@ -11,7 +11,7 @@ if (/delivery/.test(window.location.href)) {
     }
 
     if (!mobileCheck()) {
-        tracksImage.addClass('pulse');
+        //tracksImage.addClass('pulse');
         setDeliveryHandlers();
     } else {
         showDeliveryCompany();
@@ -19,7 +19,7 @@ if (/delivery/.test(window.location.href)) {
 
     function setDeliveryHandlers() {
         map.children('.baikal').on('mouseenter', function() {
-            tracksImage.removeClass('pulse');
+            //tracksImage.removeClass('pulse');
 
             var el = $('.delivery-column--lightblue');
             el.siblings('.delivery-column').fadeOut();
@@ -27,7 +27,7 @@ if (/delivery/.test(window.location.href)) {
         });
 
         map.children('.dl').on('mouseenter', function() {
-            tracksImage.removeClass('pulse');
+            //tracksImage.removeClass('pulse');
 
             var el = $('.delivery-column--yellow');
             el.siblings('.delivery-column').fadeOut();
@@ -35,7 +35,7 @@ if (/delivery/.test(window.location.href)) {
         });
 
         map.children('.pek').on('mouseenter', function() {
-            tracksImage.removeClass('pulse');
+            //tracksImage.removeClass('pulse');
             var el = $('.delivery-column--blue');
             el.siblings('.delivery-column').fadeOut();
             el.slideDown();
@@ -52,6 +52,14 @@ if (/delivery/.test(window.location.href)) {
         $('.delivery-link').on('click',  function(e) {
             e.preventDefault();
            showAmply($(this));
+        });
+
+        $('.delivery-logo').on('mouseenter', function() {
+            var myIndex = $(this).index('.delivery-logo');
+
+            var el = $('.delivery-column').eq(myIndex);
+            el.siblings('.delivery-column').fadeOut();
+            el.slideDown();
         });
     }
 
