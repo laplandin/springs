@@ -72,7 +72,7 @@ gulp.task('html:build', function() {
 var condition = '.src/plugins/**/*.js';
 gulp.task('js:build', function() {
     gulp.src(path.src.js)
-    // .pipe(uglify()) //Сжимаем js
+    .pipe(uglify()) //Сжимаем js
         .pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream:true}));
@@ -83,8 +83,11 @@ gulp.task('css:build', function() {
         .pipe(plumber())
         //.pipe(sourcemaps.init())
         .pipe(less())
-        // .pipe(prefixer())
-        // .pipe(cssmin({compatibility: 'ie10'}))
+        .pipe(prefixer({
+            browsers: ['last 4 versions'],
+            cascade: false
+        }))
+        .pipe(cssmin({compatibility: 'ie10'}))
         //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream:true}));
