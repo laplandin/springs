@@ -71,6 +71,20 @@
   height: 100vh;
   padding-top: 10vh;
 
+  &::after {
+    .pseudo();
+    right: 0;
+    top: 0;
+    width: 750px;
+    height: 100vh;
+    background: url('../img/track.png') no-repeat center right;
+    background-size: contain;
+
+    @media @md-desktop {
+      width: 350px;
+    }
+  }
+
   &.baikal {
     background-color: #0794d5;
     z-index: 99;
@@ -89,11 +103,21 @@
   .logo-wrapper {
     padding: 15px 0;
     background-color: white;
-    max-height: 170px;
-    min-height: 150px;
+    height: 150px;
 
     & .logo--bottom {
       transform: translateY(-75px);
+    }
+
+    @media @md-desktop {
+      height: 100px;
+    }
+
+    img {
+      @media @md-desktop {
+        max-width: 300px;
+        height: auto;
+      }
     }
   }
 
