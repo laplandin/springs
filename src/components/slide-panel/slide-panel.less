@@ -71,20 +71,6 @@
   height: 100vh;
   padding-top: 10vh;
 
-  &::after {
-    .pseudo();
-    right: 0;
-    top: 0;
-    width: 750px;
-    height: 100vh;
-    background: url('../img/track.png') no-repeat center right;
-    background-size: contain;
-
-    @media @md-desktop {
-      width: 350px;
-    }
-  }
-
   &.baikal {
     background-color: #0794d5;
     z-index: 99;
@@ -125,5 +111,25 @@
     margin: 40px 0;
     .font(@akrobat, 2em, 1.5em);
     color: white;
+
+    @media @wide-desktop {
+      font-size: 1.8em;
+      line-height: 1.5em;
+    }
+  }
+
+  .track-wrapper {
+    position: absolute;
+    margin: 0 -15px;
+    top: 10%;
+    right: 0;
+
+    @media @wide-desktop {
+      img {
+        width: 300px;
+        height: auto;
+        margin-left: auto;
+      }
+    }
   }
 }

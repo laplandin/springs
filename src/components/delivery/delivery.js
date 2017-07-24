@@ -10,36 +10,39 @@ if (/delivery/.test(window.location.href)) {
         return check;
     }
 
-    if (!mobileCheck()) {
-        //tracksImage.addClass('pulse');
-        setDeliveryHandlers();
-    } else {
-        showDeliveryCompany();
-    }
+    setDeliveryHandlers();
+
 
     function setDeliveryHandlers() {
-        map.children('.baikal').on('mouseenter', function() {
-            //tracksImage.removeClass('pulse');
 
-            var el = $('.delivery-column--lightblue');
-            el.siblings('.delivery-column').fadeOut();
-            el.slideDown();
-        });
+        if (!mobileCheck()) {
+            //tracksImage.addClass('pulse');
+            map.children('.baikal').on('mouseenter', function() {
+                //tracksImage.removeClass('pulse');
 
-        map.children('.dl').on('mouseenter', function() {
-            //tracksImage.removeClass('pulse');
+                var el = $('.delivery-column--lightblue');
+                el.siblings('.delivery-column').fadeOut();
+                el.slideDown();
+            });
 
-            var el = $('.delivery-column--yellow');
-            el.siblings('.delivery-column').fadeOut();
-            el.slideDown();
-        });
+            map.children('.dl').on('mouseenter', function() {
+                //tracksImage.removeClass('pulse');
 
-        map.children('.pek').on('mouseenter', function() {
-            //tracksImage.removeClass('pulse');
-            var el = $('.delivery-column--blue');
-            el.siblings('.delivery-column').fadeOut();
-            el.slideDown();
-        });
+                var el = $('.delivery-column--yellow');
+                el.siblings('.delivery-column').fadeOut();
+                el.slideDown();
+            });
+
+            map.children('.pek').on('mouseenter', function() {
+                //tracksImage.removeClass('pulse');
+                var el = $('.delivery-column--blue');
+                el.siblings('.delivery-column').fadeOut();
+                el.slideDown();
+            });
+        } else {
+            showDeliveryCompany();
+        }
+
 
         function showAmply(element) {
             var link = element.closest('.delivery-link');
