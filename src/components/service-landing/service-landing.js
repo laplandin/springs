@@ -11,7 +11,7 @@ function mobileCheck() {
 }
 
 if (!mobileCheck()) {
-    setDesignationHoverHandling();
+    //setDesignationHoverHandling();
 }
 
 function setDesignationHoverHandling() {

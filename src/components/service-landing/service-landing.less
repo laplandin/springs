@@ -262,6 +262,11 @@
         left: 58px;
       }
     }
+
+    &:nth-of-type(11),
+    &:nth-of-type(12) {
+      margin-top: 28px;
+    }
   }
 
   .card-text {
@@ -342,6 +347,11 @@
     }
   }
 
+  .slogan--bottom {
+    position: absolute;
+    bottom: 50px;
+  }
+
   img {
     display: block;
     width: 100%;
@@ -364,7 +374,7 @@
     text-transform: uppercase;
   }
 
-  @iterations: 9;
+  @iterations: 12;
 
   .mixin-loop (@i) when (@i > 0) {
     .slide-@{i} {
