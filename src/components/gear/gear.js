@@ -1,4 +1,4 @@
-if (/contacts/.test(window.location.href)) {
+if (/contacts/.test(window.location.href) || /404/.test(window.location.href)) {
     var width = 550,
         height = 500,
         radius = 80,
